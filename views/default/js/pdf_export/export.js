@@ -39,7 +39,7 @@ pdf_export.getBase64Image = function(img) {
  * @param {Object} event
  */
 pdf_export.exportToPDF = function(event) {
-	if (!pdf_export.isCanvasSupported) {
+	if (!pdf_export.isCanvasSupported()) {
 		alert(elgg.echo('pdf_export:canvas_not_supported'));
 		event.preventDefault();
 		return;
