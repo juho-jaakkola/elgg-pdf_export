@@ -1,11 +1,11 @@
 <?php
 /**
- * Create a cache directory for pdf exports
+ * Create a temporary directory for pdf exports
  * 
  * @todo Check server requirements and add an admin notice if necessary
  */
 
-$file_dir = elgg_get_data_path() . 'pdf_cache';
+$file_dir = elgg_get_data_path() . 'pdf_export';
 
 if (!is_dir($file_dir)) {
 	// Create empty directory for the userexport

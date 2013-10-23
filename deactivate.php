@@ -1,4 +1,4 @@
 <?php
 /**
- * @todo Delete the whole pdf cache dir?
+ * @todo Delete the whole pdf tmp dir?
  */
