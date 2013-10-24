@@ -16,7 +16,7 @@ $lang = get_current_language();
 <head>
 <?php echo elgg_view('page/elements/head', $vars); ?>
 </head>
-	<body>
+	<body style="background: #fff;">
 		<div class="elgg-page elgg-page-default">
 			<div class="elgg-page-body">
 				<div class="elgg-inner">
