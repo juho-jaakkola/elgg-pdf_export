@@ -14,8 +14,8 @@ if (empty($vars['title'])) {
 
 $css = elgg_get_loaded_css();
 
-$version = get_version();
-$release = get_version(true);
+$version = elgg_get_version();
+$release = elgg_get_version(true);
 ?>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="ElggRelease" content="<?php echo $release; ?>" />
