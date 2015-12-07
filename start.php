@@ -6,8 +6,6 @@ elgg_register_event_handler('init', 'system', 'pdf_init');
  * Initialize the plugin
  */
 function pdf_init () {
-	elgg_register_js('pdf_export', 'mod/pdf_export/views/default/js/pdf_export/export.js');
-
 	elgg_set_config('pdf_export_supported_page_handlers', array('blog', 'pages'));
 	elgg_set_config('pdf_export_supported_subtypes', array('blog', 'page', 'page_top'));
 
@@ -18,11 +16,11 @@ function pdf_init () {
 
 /**
  * Handle requests to www.example.com/pdf/*
- * 
+ *
  * URLs take the form of
  *  Generate a PDF file: pdf/generate
  *  Download a PDF file: pdf/download
- * 
+ *
  * @param array $page
  * @return boolean|void
  */
@@ -79,7 +77,7 @@ function pdf_page_handler($page) {
 
 /**
  * Add pdf generation link to the pages that support it
- * 
+ *
  * @param string $hook   Hook name
  * @param string $type   Hook type
  * @param array  $return Array containing handler name and page segment
@@ -105,7 +103,7 @@ function pdf_export_add_extras_menu_item($hook, $type, $return, $params) {
 
 	if (isset($return['segments'][1])) {
 		$guid = $return['segments'][1];
-		elgg_load_js('pdf_export');
+		elgg_require_js('pdf_export/export');
 
 		elgg_register_menu_item('extras', array(
 			'name' => 'pdf',
